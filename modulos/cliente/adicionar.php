@@ -1,6 +1,4 @@
-<div class="content-wrapper">
-    <!-- Content Header (Page header) -->
-    <div class="content-header">
+ <div class="content-header">
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
@@ -59,10 +57,8 @@
     <!-- /.content -->
   </div>
   <!-- /.content-wrapper -->
-
 <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
 <script>
-  
   //Mascaras
 $(document).ready(function(){
   $('#CPF').mask('999.999.999-99');

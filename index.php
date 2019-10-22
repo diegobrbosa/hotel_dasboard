@@ -114,7 +114,13 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="cadastroFuncionarios.html" class="nav-link">
+                <a href="?modulo=cliente&acao=adicionar" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Cadastro de Clientes</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="?modulo=funcionario&acao=adicionar" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Cadastro de Funcionários</p>
                 </a>
@@ -123,12 +129,6 @@
                 <a href="cadastroQuartos.html" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Cadastro de Quartos</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="cadastroClientes.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Cadastro de Clientes</p>
                 </a>
               </li>
             </ul>
