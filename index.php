@@ -203,11 +203,11 @@
         }
 
         if($modulo){
-          if(file_exists("Modulos/".$modulo."/".$acao.".php")){
-            include("Modulos/".$modulo."/".$acao.".php");
+          if(file_exists("modulos/".$modulo."/".$acao.".php")){
+            include("modulos/".$modulo."/".$acao.".php");
           }
           }else{
-              include("Modulos/home/ver.php");
+              include("modulos/home/ver.php");
           }
     ?>
 
