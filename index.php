@@ -126,7 +126,7 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a href="cadastroQuartos.html" class="nav-link">
+                <a href="?modulo=quarto&acao=adicionar" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Cadastro de Quartos</p>
                 </a>

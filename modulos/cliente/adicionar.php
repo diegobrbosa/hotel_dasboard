@@ -13,9 +13,7 @@
     <!-- Main content -->
     <!-- Formulário Cadastro -->
     <div class="container">
-      
-   
-              <form role="form" action="#" method="POST">
+ <form role="form" action="#" method="POST">
                 <div class="card-body">
                   <div class="form-group">
                     <label>Nome</label>
@@ -56,8 +54,7 @@
     </section>
     <!-- /.content -->
   </div>
-  <!-- /.content-wrapper -->
-<script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+
 <script>
   //Mascaras
 $(document).ready(function(){
