@@ -1,10 +1,12 @@
 <?php require_once 'global.php' ?>
 <?php
-    try {
-        $listaCategoria = Categoria::listar();
-    } catch (Exception $e) {
-        Erro::trataErro($e);
-    }
+
+  try{
+    $listaCategoria = Categoria::listar();
+  }catch(PDOException $e){
+    Erro::trataErro($e);
+  }
+
 ?>
 <?php require_once 'cabecalho.php' ?>
 <div class="row">
@@ -12,7 +14,7 @@
         <h2>Criar Nova Produto</h2>
     </div>
 </div>
-<?php if (count($listaCategoria) > 0): ?>
+<?php if(count($listaCategoria) > 0):?>
     <form action="produtos-criar-post.php" method="post">
         <div class="row">
             <div class="col-md-6 col-md-offset-3">
@@ -26,21 +28,21 @@
                 </div>
                 <div class="form-group">
                     <label for="quantidade">Quantidade do Produto</label>
-                    <input type="number" name="quantidade"  min="0" class="form-control" placeholder="Quantidade do Produto" required>
+                    <input type="number" name="quantidade" min="0" class="form-control" placeholder="Quantidade do Produto" required>
                 </div>
                 <div class="form-group">
                     <label for="nome">Categoria do Produto</label>
                     <select class="form-control" name="categoria_id">
-                        <?php foreach ($listaCategoria as $linha): ?>
-                            <option value="<?php echo $linha['id'] ?>"><?php echo $linha['nome'] ?></option>
-                        <?php endforeach ?>
+                        <?php foreach($listaCategoria as $linha):?>
+                        <option value="<?php echo $linha['id']?>"><?php echo $linha['nome']?></option>
+                        <?php endforeach?>
                     </select>
                 </div>
                 <input type="submit" class="btn btn-success btn-block" value="Salvar">
             </div>
         </div>
     </form>
-<?php else: ?>
-    <p>Nenhuma categoria cadastrada no sistema. Por favor, crie uma categoria antes de cadastrar um produto</p>
-<?php endif ?>
+<?php else:?>
+<p>Nenhuma categoria cadastrada no sistema. Por favor crie uma categoria antes de cadastrar um produto.</p>
+<?php endif?>
 <?php require_once 'rodape.php' ?>

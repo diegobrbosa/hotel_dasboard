@@ -210,8 +210,6 @@
               include("modulos/home/ver.php");
           }
     ?>
-
-
   </div>
   <!-- /.content-wrapper -->
   <footer class="main-footer">

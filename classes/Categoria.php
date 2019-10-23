@@ -28,10 +28,11 @@ class Categoria
         $query = "SELECT id, nome FROM categorias WHERE id = :id";
         $conexao = Conexao::pegarConexao();
         $stmt = $conexao->prepare($query);
-        $stmt->bindValue(':id', $this->id);
+        $stmt->bindValue(':id',$this->id);
         $stmt->execute();
         $linha = $stmt->fetch();
-        $this->nome = $linha['nome'];
+            $this->nome = $linha['nome'];
+
     }
 
     public function inserir()
@@ -39,17 +40,17 @@ class Categoria
         $query = "INSERT INTO categorias (nome) VALUES (:nome)";
         $conexao = Conexao::pegarConexao();
         $stmt = $conexao->prepare($query);
-        $stmt->bindValue(':nome', $this->nome);
+        $stmt->bindValue(':nome',$this->nome);
         $stmt->execute();
     }
 
     public function atualizar()
     {
-        $query = "UPDATE categorias set nome = :nome WHERE id = :id";
+        $query = "UPDATE categorias set nome = :nome WHERE id = :id " ;
         $conexao = Conexao::pegarConexao();
         $stmt = $conexao->prepare($query);
-        $stmt->bindValue(':nome', $this->nome);
-        $stmt->bindValue(':id', $this->id);
+        $stmt->bindValue(':nome',$this->nome);
+        $stmt->bindValue(':id',$this->id);
         $stmt->execute();
     }
 
@@ -58,7 +59,7 @@ class Categoria
         $query = "DELETE FROM categorias WHERE id = :id";
         $conexao = Conexao::pegarConexao();
         $stmt = $conexao->prepare($query);
-        $stmt->bindValue(':id', $this->id);
+        $stmt->bindValue(':id',$this->id);
         $stmt->execute();
     }
 }
